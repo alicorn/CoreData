@@ -21,7 +21,7 @@
     var quantitytext: String = ""
     var infotext: String = ""
     
-    @IBOutlet weak var adressLabel: UILabel!
+
     
     @IBOutlet weak var strasse: UILabel!
     @IBOutlet weak var plz: UILabel!
@@ -29,6 +29,7 @@
     @IBOutlet weak var land: UILabel!
 
     @IBOutlet weak var button: UIButton!
+
     
     @IBOutlet weak var latitudeLabel: UILabel!
     @IBOutlet weak var longitudeLabel: UILabel!
@@ -78,7 +79,6 @@
                 
                 if error == nil && placemarks.count > 0 {
                     self.placeMark = placemarks.last as? CLPlacemark
-                    self.adressLabel.text = "\(self.placeMark!.thoroughfare)\n\(self.placeMark!.postalCode) \(self.placeMark!.locality)\n\(self.placeMark!.country)"
                     
                     self.strasse.text = "\(self.placeMark!.thoroughfare)"
                     self.plz.text = "\(self.placeMark!.postalCode)"
