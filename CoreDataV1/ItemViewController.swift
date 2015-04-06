@@ -15,10 +15,12 @@
     @IBOutlet weak var item : UITextField! = nil
     @IBOutlet weak var quantity : UITextField! = nil
     @IBOutlet weak var info : UITextField! = nil
+    @IBOutlet weak var land: UITextField! = nil
    
     var itemtext: String = ""
     var quantitytext: String = ""
     var infotext: String = ""
+    var landtext: String = ""
 
     @IBOutlet weak var button: UIButton!
  
@@ -37,9 +39,11 @@
             item.text = itemtext
             quantity.text = quantitytext
             info.text = infotext
+            land.text = landtext
         }
        
     }
+   
 
     // MARK: - CLLocationManagerDelegate
     
@@ -65,6 +69,7 @@
                     
                     self.quantity.text = "\(self.placeMark!.thoroughfare)"
                     self.info.text = "\(self.placeMark!.postalCode) \(self.placeMark!.locality)"
+                    self.land.text = "\(self.placeMark!.country)"
                     
                     self.manager.stopUpdatingLocation()
                     self.button.enabled = true
@@ -91,6 +96,7 @@
             existingItem.setValue(item.text as String, forKey: "item")
             existingItem.setValue(quantity.text as String, forKey: "quantity")
             existingItem.setValue(info.text as String, forKey: "info")
+            existingItem.setValue(land.text as String, forKey: "land")
             println("true")
             
         }else{
@@ -102,6 +108,7 @@
             newItem.info = info.text
             newItem.item = item.text
             newItem.quantity = quantity.text
+            newItem.land = land.text
             println("fale")
     
         }

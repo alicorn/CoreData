@@ -34,18 +34,26 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cW1-jD-dX7">
                                 <rect key="frame" x="0.0" y="698" width="414" height="44"/>
                                 <items>
-                                    <barButtonItem systemItem="search" id="lAy-nH-kRA"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="cj6-R1-Nu3"/>
+                                    <barButtonItem style="plain" id="iEd-J9-g7Z">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="grQ-7Y-TnH">
+                                            <rect key="frame" x="16" y="301" width="98" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Suche Starten">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="button:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="8Ll-fa-l6D"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="grQ-7Y-TnH">
-                                <rect key="frame" x="16" y="301" width="98" height="30"/>
-                                <state key="normal" title="Suche Starten">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="button:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="8Ll-fa-l6D"/>
-                                </connections>
-                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Land" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LEh-Y9-sXR">
+                                <rect key="frame" x="17" y="196" width="381" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -66,6 +74,7 @@
                         <outlet property="button" destination="grQ-7Y-TnH" id="uKZ-T6-rjy"/>
                         <outlet property="info" destination="QsO-g2-pKU" id="aEy-t8-apR"/>
                         <outlet property="item" destination="H5p-kj-dfn" id="bKc-cS-MBJ"/>
+                        <outlet property="land" destination="LEh-Y9-sXR" id="BlH-Qa-K3k"/>
                         <outlet property="quantity" destination="wJb-qt-IqA" id="YnG-bL-dAH"/>
                     </connections>
                 </viewController>
