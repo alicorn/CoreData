@@ -11,8 +11,7 @@
  import CoreLocation
  
  class ItemViewController: UIViewController, CLLocationManagerDelegate {
-    
-
+ 
     @IBOutlet weak var item : UITextField! = nil
     @IBOutlet weak var quantity : UITextField! = nil
     @IBOutlet weak var info : UITextField! = nil
@@ -21,17 +20,12 @@
     var quantitytext: String = ""
     var infotext: String = ""
 
-
     @IBOutlet weak var button: UIButton!
-
-    
+ 
     var manager = CLLocationManager()
     var geocoder = CLGeocoder()
     var placeMark: CLPlacemark?
-    
    
-    
-    
     var existingItem: NSManagedObject!
     
     override func viewDidLoad() {
@@ -44,8 +38,6 @@
             quantity.text = quantitytext
             info.text = infotext
         }
-        
-        
        
     }
 
@@ -80,10 +72,6 @@
             })
         }
     }
-    
-    
-    
-    
     
     
     @IBAction func save(sender: AnyObject) {
@@ -146,8 +134,6 @@
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
     
     @IBAction func button(sender: AnyObject) {
 
