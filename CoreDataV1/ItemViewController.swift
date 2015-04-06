@@ -11,35 +11,23 @@
  import CoreLocation
  
  class ItemViewController: UIViewController, CLLocationManagerDelegate {
-    
-
+ 
     @IBOutlet weak var item : UITextField! = nil
     @IBOutlet weak var quantity : UITextField! = nil
     @IBOutlet weak var info : UITextField! = nil
+    @IBOutlet weak var land: UITextField! = nil
    
     var itemtext: String = ""
     var quantitytext: String = ""
     var infotext: String = ""
-    
-    @IBOutlet weak var adressLabel: UILabel!
-    
-    @IBOutlet weak var strasse: UILabel!
-    @IBOutlet weak var plz: UILabel!
-    @IBOutlet weak var ort: UILabel!
-    @IBOutlet weak var land: UILabel!
+    var landtext: String = ""
 
     @IBOutlet weak var button: UIButton!
-    
-    @IBOutlet weak var latitudeLabel: UILabel!
-    @IBOutlet weak var longitudeLabel: UILabel!
-    
+ 
     var manager = CLLocationManager()
     var geocoder = CLGeocoder()
     var placeMark: CLPlacemark?
-    
    
-    
-    
     var existingItem: NSManagedObject!
     
     override func viewDidLoad() {
@@ -51,11 +39,11 @@
             item.text = itemtext
             quantity.text = quantitytext
             info.text = infotext
+            land.text = landtext
         }
-        
-        
        
     }
+   
 
     // MARK: - CLLocationManagerDelegate
     
@@ -70,19 +58,17 @@
         let currentLocation = manager.location
         
         if currentLocation != nil {
-            latitudeLabel.text = "\(currentLocation.coordinate.latitude)"
-            longitudeLabel.text = "\(currentLocation.coordinate.longitude)"
+            //latitudeLabel.text = "\(currentLocation.coordinate.latitude)"
+            //longitudeLabel.text = "\(currentLocation.coordinate.longitude)"
             
             geocoder.reverseGeocodeLocation(currentLocation, completionHandler: {
                 placemarks, error in
                 
                 if error == nil && placemarks.count > 0 {
                     self.placeMark = placemarks.last as? CLPlacemark
-                    self.adressLabel.text = "\(self.placeMark!.thoroughfare)\n\(self.placeMark!.postalCode) \(self.placeMark!.locality)\n\(self.placeMark!.country)"
                     
-                    self.strasse.text = "\(self.placeMark!.thoroughfare)"
-                    self.plz.text = "\(self.placeMark!.postalCode)"
-                    self.ort.text = "\(self.placeMark!.locality)"
+                    self.quantity.text = "\(self.placeMark!.thoroughfare)"
+                    self.info.text = "\(self.placeMark!.postalCode) \(self.placeMark!.locality)"
                     self.land.text = "\(self.placeMark!.country)"
                     
                     self.manager.stopUpdatingLocation()
@@ -91,10 +77,6 @@
             })
         }
     }
-    
-    
-    
-    
     
     
     @IBAction func save(sender: AnyObject) {
@@ -114,6 +96,7 @@
             existingItem.setValue(item.text as String, forKey: "item")
             existingItem.setValue(quantity.text as String, forKey: "quantity")
             existingItem.setValue(info.text as String, forKey: "info")
+            existingItem.setValue(land.text as String, forKey: "land")
             println("true")
             
         }else{
@@ -125,6 +108,7 @@
             newItem.info = info.text
             newItem.item = item.text
             newItem.quantity = quantity.text
+            newItem.land = land.text
             println("fale")
     
         }
@@ -157,8 +141,6 @@
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
     
     @IBAction func button(sender: AnyObject) {
 

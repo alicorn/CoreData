@@ -3,9 +3,10 @@
     <entity name="List" representedClassName="Model" syncable="YES">
         <attribute name="info" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="item" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="land" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="quantity" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="List" positionX="-63" positionY="-18" width="128" height="90"/>
+        <element name="List" positionX="-6183" positionY="-4284" width="128" height="103"/>
     </elements>
 </model>

@@ -18,6 +18,7 @@ class Model: NSManagedObject {
     @NSManaged var info: String
     @NSManaged var item: String
     @NSManaged var quantity: String
+    @NSManaged var land: String
     
     
 }

@@ -41,6 +41,7 @@ class ListTableViewController: UITableViewController {
             IVC.itemtext = selectedItem.valueForKey("item") as! String
             IVC.quantitytext = (selectedItem.valueForKey("quantity") as! String)
             IVC.infotext = selectedItem.valueForKey("info") as! String
+            IVC.landtext = selectedItem.valueForKey("land") as! String
             IVC.existingItem = selectedItem
             
             
@@ -85,8 +86,9 @@ class ListTableViewController: UITableViewController {
             
             var qnt = data.valueForKeyPath("quantity") as! String
             var inf = data.valueForKeyPath("info") as! String
+            var lan = data.valueForKeyPath("land") as! String
             
-            cell.detailTextLabel?.text = "\(qnt) items  - \(inf)"
+            cell.detailTextLabel?.text = "\(qnt) \(inf)  [\(lan)]"
             
         }
         

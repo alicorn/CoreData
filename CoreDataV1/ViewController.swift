@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  CoreDataV1
 //
-//  Created by alicorn on 4/5/15.
+//  Created by alicorn on 4/6/15.
 //  Copyright (c) 2015 pegasus studios. All rights reserved.
 //
 
@@ -11,60 +11,67 @@ import CoreLocation
 
 class ViewController: UIViewController, CLLocationManagerDelegate {
 
-    @IBOutlet weak var latitudeLabel: UILabel!
+
+    
+    @IBOutlet weak var latitudelabel: UILabel!
     @IBOutlet weak var longitudeLabel: UILabel!
     @IBOutlet weak var adressLabel: UILabel!
     @IBOutlet weak var button: UIButton!
-
     
     var manager = CLLocationManager()
     var geocoder = CLGeocoder()
-    var placeMark: CLPlacemark?
+    var placseMark = CLPlacemark()
     
-    // MARK: - ViewController-Lifecycle
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         manager.requestAlwaysAuthorization()
+
+        // Do any additional setup after loading the view.
     }
     
-    // MARK: - CLLocationManagerDelegate
-    
     func locationManager(manager: CLLocationManager!, didFailWithError error: NSError!) {
-        println("ERROR: \(error.localizedDescription)")
+        println("Error: \(error.localizedDescription)")
         
     }
     
     func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
-        println("new Location: \(manager.location)")
+        println("New Location: \(manager.location)")
         
         let currentLocation = manager.location
         
-        if currentLocation != nil {
-            latitudeLabel.text = "\(currentLocation.coordinate.latitude)"
+        if currentLocation != nil{
+            latitudelabel.text = "\(currentLocation.coordinate.latitude)"
             longitudeLabel.text = "\(currentLocation.coordinate.longitude)"
             
             geocoder.reverseGeocodeLocation(currentLocation, completionHandler: {
-                placemarks, error in
+            placsemarks, error in
                 
-                if error == nil && placemarks.count > 0 {
-                    self.placeMark = placemarks.last as? CLPlacemark
-                    self.adressLabel.text = "\(self.placeMark!.thoroughfare)\n\(self.placeMark!.postalCode) \(self.placeMark!.locality)\n\(self.placeMark!.country)"
+                if error != nil && placsemarks.count > 0{
+                    self.placseMark = (placsemarks.last as? CLPlacemark)!
+                    self.adressLabel.text = "\(self.placseMark.country)"
                     self.manager.stopUpdatingLocation()
                     self.button.enabled = true
                 }
+            
             })
         }
     }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
     
-    // MARK: - IBActions
-    
-    @IBAction func button(sender: AnyObject) {
+
+    @IBAction func buttonPressed(sender: AnyObject) {
         manager.delegate = self
         manager.desiredAccuracy = kCLLocationAccuracyBest
         manager.startUpdatingLocation()
         button.enabled = false
     }
 
- 
+
 }
