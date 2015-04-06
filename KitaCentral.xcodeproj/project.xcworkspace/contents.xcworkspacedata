@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:CoreDataV1.xcodeproj">
+      location = "self:KitaCentral.xcodeproj">
    </FileRef>
 </Workspace>

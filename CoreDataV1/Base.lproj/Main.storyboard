@@ -7,7 +7,7 @@
         <!--Add Item-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ItemViewController" customModule="CoreDataV1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ItemViewController" customModule="KitaCentral" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -37,9 +37,9 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="cj6-R1-Nu3"/>
                                     <barButtonItem style="plain" id="iEd-J9-g7Z">
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="grQ-7Y-TnH">
-                                            <rect key="frame" x="16" y="301" width="98" height="30"/>
+                                            <rect key="frame" x="300" y="7" width="116" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="Suche Starten">
+                                            <state key="normal" title="Location Suchen">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                             <connections>
@@ -85,7 +85,7 @@
         <!--List-->
         <scene sceneID="uz8-cr-ARU">
             <objects>
-                <tableViewController id="cMG-Z0-zOf" customClass="ListTableViewController" customModule="CoreDataV1" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="cMG-Z0-zOf" customClass="ListTableViewController" customModule="KitaCentral" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="e4O-xz-jyf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

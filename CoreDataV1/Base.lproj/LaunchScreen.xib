@@ -29,6 +29,7 @@
                     <rect key="frame" x="78" y="230" width="258" height="298"/>
                 </imageView>
             </subviews>
+            <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
             <nil key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
             <point key="canvasLocation" x="548" y="455"/>
