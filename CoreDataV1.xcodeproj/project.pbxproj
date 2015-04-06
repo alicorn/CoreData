@@ -16,6 +16,8 @@
 		D733EB5C1AD08B6C000B0DD6 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = D733EB5B1AD08B6C000B0DD6 /* Model.swift */; };
 		D733EB5E1AD08BA3000B0DD6 /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D733EB5D1AD08BA3000B0DD6 /* ListTableViewController.swift */; };
 		D733EB601AD08BCE000B0DD6 /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D733EB5F1AD08BCE000B0DD6 /* ItemViewController.swift */; };
+		D741CD051AD340DC006F4295 /* Logo-Kindergarten.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D741CD041AD340DC006F4295 /* Logo-Kindergarten.jpg */; };
+		D741CD071AD3410E006F4295 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = D741CD061AD3410E006F4295 /* logo.png */; };
 		D7A1E1641AD0CA2100C8AB77 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7A1E1631AD0CA2100C8AB77 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +45,8 @@
 		D733EB5B1AD08B6C000B0DD6 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		D733EB5D1AD08BA3000B0DD6 /* ListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
 		D733EB5F1AD08BCE000B0DD6 /* ItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
+		D741CD041AD340DC006F4295 /* Logo-Kindergarten.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Logo-Kindergarten.jpg"; path = "../../../../Users/pegasusstudios/Pictures/Logo-Kindergarten.jpg"; sourceTree = "<group>"; };
+		D741CD061AD3410E006F4295 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = ../../../../Users/pegasusstudios/Pictures/logo.png; sourceTree = "<group>"; };
 		D7A1E1631AD0CA2100C8AB77 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -68,6 +72,8 @@
 		D733EB2A1AD088B7000B0DD6 = {
 			isa = PBXGroup;
 			children = (
+				D741CD061AD3410E006F4295 /* logo.png */,
+				D741CD041AD340DC006F4295 /* Logo-Kindergarten.jpg */,
 				D7A1E1631AD0CA2100C8AB77 /* CoreLocation.framework */,
 				D733EB351AD088B7000B0DD6 /* CoreDataV1 */,
 				D733EB4E1AD088B7000B0DD6 /* CoreDataV1Tests */,
@@ -205,6 +211,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D741CD051AD340DC006F4295 /* Logo-Kindergarten.jpg in Resources */,
+				D741CD071AD3410E006F4295 /* logo.png in Resources */,
 				D733EB411AD088B7000B0DD6 /* Main.storyboard in Resources */,
 				D733EB461AD088B7000B0DD6 /* LaunchScreen.xib in Resources */,
 				D733EB431AD088B7000B0DD6 /* Images.xcassets in Resources */,
