@@ -20,19 +20,10 @@
     var itemtext: String = ""
     var quantitytext: String = ""
     var infotext: String = ""
-    
 
-    
-    @IBOutlet weak var strasse: UILabel!
-    @IBOutlet weak var plz: UILabel!
-    @IBOutlet weak var ort: UILabel!
-    @IBOutlet weak var land: UILabel!
 
     @IBOutlet weak var button: UIButton!
 
-    
-    @IBOutlet weak var latitudeLabel: UILabel!
-    @IBOutlet weak var longitudeLabel: UILabel!
     
     var manager = CLLocationManager()
     var geocoder = CLGeocoder()
@@ -71,8 +62,8 @@
         let currentLocation = manager.location
         
         if currentLocation != nil {
-            latitudeLabel.text = "\(currentLocation.coordinate.latitude)"
-            longitudeLabel.text = "\(currentLocation.coordinate.longitude)"
+            //latitudeLabel.text = "\(currentLocation.coordinate.latitude)"
+            //longitudeLabel.text = "\(currentLocation.coordinate.longitude)"
             
             geocoder.reverseGeocodeLocation(currentLocation, completionHandler: {
                 placemarks, error in
@@ -80,10 +71,8 @@
                 if error == nil && placemarks.count > 0 {
                     self.placeMark = placemarks.last as? CLPlacemark
                     
-                    self.strasse.text = "\(self.placeMark!.thoroughfare)"
-                    self.plz.text = "\(self.placeMark!.postalCode)"
-                    self.ort.text = "\(self.placeMark!.locality)"
-                    self.land.text = "\(self.placeMark!.country)"
+                    self.quantity.text = "\(self.placeMark!.thoroughfare)"
+                    self.info.text = "\(self.placeMark!.postalCode) \(self.placeMark!.locality)"
                     
                     self.manager.stopUpdatingLocation()
                     self.button.enabled = true
