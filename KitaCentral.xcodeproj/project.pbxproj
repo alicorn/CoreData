@@ -47,6 +47,7 @@
 		D733EB5F1AD08BCE000B0DD6 /* ItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
 		D741CD041AD340DC006F4295 /* Logo-Kindergarten.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Logo-Kindergarten.jpg"; path = "../../../../Users/pegasusstudios/Pictures/Logo-Kindergarten.jpg"; sourceTree = "<group>"; };
 		D741CD061AD3410E006F4295 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = ../../../../Users/pegasusstudios/Pictures/logo.png; sourceTree = "<group>"; };
+		D795CD171AD4592900F08385 /* KitaCentral.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = KitaCentral.entitlements; sourceTree = "<group>"; };
 		D7A1E1631AD0CA2100C8AB77 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -72,6 +73,7 @@
 		D733EB2A1AD088B7000B0DD6 = {
 			isa = PBXGroup;
 			children = (
+				D795CD171AD4592900F08385 /* KitaCentral.entitlements */,
 				D741CD061AD3410E006F4295 /* logo.png */,
 				D741CD041AD340DC006F4295 /* Logo-Kindergarten.jpg */,
 				D7A1E1631AD0CA2100C8AB77 /* CoreLocation.framework */,
@@ -181,6 +183,11 @@
 					D733EB321AD088B7000B0DD6 = {
 						CreatedOnToolsVersion = 6.3;
 						DevelopmentTeam = 44P4G4HCCY;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 0;
+							};
+						};
 					};
 					D733EB4A1AD088B7000B0DD6 = {
 						CreatedOnToolsVersion = 6.3;
@@ -366,9 +373,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = CoreDataV1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = KitaCentral;
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -377,9 +386,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = CoreDataV1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = KitaCentral;
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
