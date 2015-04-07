@@ -146,7 +146,7 @@
 
 
         manager.delegate = self
-        manager.desiredAccuracy = kCLLocationAccuracyBest
+        manager.desiredAccuracy = kCLLocationAccuracyBestForNavigation
         manager.startUpdatingLocation()
         button.enabled = false
         
