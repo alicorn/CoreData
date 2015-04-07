@@ -39,7 +39,7 @@
 		D733EB401AD088B7000B0DD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D733EB421AD088B7000B0DD6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D733EB451AD088B7000B0DD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		D733EB4B1AD088B7000B0DD6 /* CoreDataV1Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreDataV1Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D733EB4B1AD088B7000B0DD6 /* KitaCentralTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KitaCentralTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D733EB501AD088B7000B0DD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D733EB511AD088B7000B0DD6 /* CoreDataV1Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataV1Tests.swift; sourceTree = "<group>"; };
 		D733EB5B1AD08B6C000B0DD6 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
@@ -85,7 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				D733EB331AD088B7000B0DD6 /* KitaCentral.app */,
-				D733EB4B1AD088B7000B0DD6 /* CoreDataV1Tests.xctest */,
+				D733EB4B1AD088B7000B0DD6 /* KitaCentralTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -134,9 +134,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D733EB321AD088B7000B0DD6 /* CoreDataV1 */ = {
+		D733EB321AD088B7000B0DD6 /* KitaCentral */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D733EB551AD088B7000B0DD6 /* Build configuration list for PBXNativeTarget "CoreDataV1" */;
+			buildConfigurationList = D733EB551AD088B7000B0DD6 /* Build configuration list for PBXNativeTarget "KitaCentral" */;
 			buildPhases = (
 				D733EB2F1AD088B7000B0DD6 /* Sources */,
 				D733EB301AD088B7000B0DD6 /* Frameworks */,
@@ -146,14 +146,14 @@
 			);
 			dependencies = (
 			);
-			name = CoreDataV1;
+			name = KitaCentral;
 			productName = CoreDataV1;
 			productReference = D733EB331AD088B7000B0DD6 /* KitaCentral.app */;
 			productType = "com.apple.product-type.application";
 		};
-		D733EB4A1AD088B7000B0DD6 /* CoreDataV1Tests */ = {
+		D733EB4A1AD088B7000B0DD6 /* KitaCentralTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D733EB581AD088B7000B0DD6 /* Build configuration list for PBXNativeTarget "CoreDataV1Tests" */;
+			buildConfigurationList = D733EB581AD088B7000B0DD6 /* Build configuration list for PBXNativeTarget "KitaCentralTests" */;
 			buildPhases = (
 				D733EB471AD088B7000B0DD6 /* Sources */,
 				D733EB481AD088B7000B0DD6 /* Frameworks */,
@@ -164,9 +164,9 @@
 			dependencies = (
 				D733EB4D1AD088B7000B0DD6 /* PBXTargetDependency */,
 			);
-			name = CoreDataV1Tests;
+			name = KitaCentralTests;
 			productName = CoreDataV1Tests;
-			productReference = D733EB4B1AD088B7000B0DD6 /* CoreDataV1Tests.xctest */;
+			productReference = D733EB4B1AD088B7000B0DD6 /* KitaCentralTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -180,6 +180,7 @@
 				TargetAttributes = {
 					D733EB321AD088B7000B0DD6 = {
 						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = 44P4G4HCCY;
 					};
 					D733EB4A1AD088B7000B0DD6 = {
 						CreatedOnToolsVersion = 6.3;
@@ -200,8 +201,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D733EB321AD088B7000B0DD6 /* CoreDataV1 */,
-				D733EB4A1AD088B7000B0DD6 /* CoreDataV1Tests */,
+				D733EB321AD088B7000B0DD6 /* KitaCentral */,
+				D733EB4A1AD088B7000B0DD6 /* KitaCentralTests */,
 			);
 		};
 /* End PBXProject section */
@@ -254,7 +255,7 @@
 /* Begin PBXTargetDependency section */
 		D733EB4D1AD088B7000B0DD6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D733EB321AD088B7000B0DD6 /* CoreDataV1 */;
+			target = D733EB321AD088B7000B0DD6 /* KitaCentral */;
 			targetProxy = D733EB4C1AD088B7000B0DD6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -364,6 +365,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = CoreDataV1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = KitaCentral;
@@ -374,6 +376,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = CoreDataV1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = KitaCentral;
@@ -394,7 +397,7 @@
 				);
 				INFOPLIST_FILE = CoreDataV1Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = CoreDataV1Tests;
+				PRODUCT_NAME = KitaCentralTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CoreDataV1.app/CoreDataV1";
 			};
 			name = Debug;
@@ -409,7 +412,7 @@
 				);
 				INFOPLIST_FILE = CoreDataV1Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = CoreDataV1Tests;
+				PRODUCT_NAME = KitaCentralTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CoreDataV1.app/CoreDataV1";
 			};
 			name = Release;
@@ -426,7 +429,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D733EB551AD088B7000B0DD6 /* Build configuration list for PBXNativeTarget "CoreDataV1" */ = {
+		D733EB551AD088B7000B0DD6 /* Build configuration list for PBXNativeTarget "KitaCentral" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D733EB561AD088B7000B0DD6 /* Debug */,
@@ -435,7 +438,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D733EB581AD088B7000B0DD6 /* Build configuration list for PBXNativeTarget "CoreDataV1Tests" */ = {
+		D733EB581AD088B7000B0DD6 /* Build configuration list for PBXNativeTarget "KitaCentralTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D733EB591AD088B7000B0DD6 /* Debug */,
